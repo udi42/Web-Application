@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Online Book Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mt-5">Shopping Cart</h2>
+    <div class="row mt-5">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">Your Cart</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Avengers Age of Ultron</td>
+                  <td>1</td>
+                  <td>Rs10.00</td>
+                  <td>Rs10.00</td>
+                  <td>
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Avengers End Game</td>
+                  <td>2</td>
+                  <td>Rs15.00</td>
+                  <td>Rs30.00</td>
+                  <td>
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-4">Order Summary</h4>
+            <p><strong>Subtotal:</strong> Rs40.00</p>
+            <p><strong>Shipping:</strong> Rs5.00</p>
+            <p><strong>Total:</strong> Rs45.00</p>
+            <button class="btn btn-primary btn-block"><a href="payment.html">c</a>Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

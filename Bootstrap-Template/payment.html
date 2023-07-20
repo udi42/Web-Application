@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Online Book Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h2 class="text-center">Payment</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Enter your card number">
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label for="expirationDate">Expiration Date:</label>
+                  <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY">
+                </div>
+                <div class="col">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-block" onclick="myFunction()">Submit Payment</button>
+              </div><br>
+              <div class="text-center">
+                <span>Check out the <a href="confirm.html">Confirmation details</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+   function myFunction() {
+    alert("Payement Successfully!");
+    }
+  </script>
+</body>
+</html>
