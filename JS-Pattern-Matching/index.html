@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/JS-Pattern-Matching/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      
+      <input type="submit" value="Login" class="submit-btn">
+    </form>
+    <div id="successMessage" class="success-msg"></div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const successMessage = document.getElementById("successMessage");
+
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Pattern matching for username and password
+      const usernamePattern = /^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/; // At least 4 alphanumeric characters eg: 1AC22MC104
+      const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // At least 6 alphanumeric characters or special characters eg: 1@abcABC
+
+      if (!usernamePattern.test(username) || !passwordPattern.test(password)) {
+        successMessage.textContent = "Invalid username or password.";
+        successMessage.style.color = "red";
+      } else {
+        const currentTime = new Date().toLocaleTimeString();
+        successMessage.textContent = `Welcome, ${username}! Current time is ${currentTime}.`;
+        successMessage.style.color = "green";
+      }
+    });
+  </script>
+</body>
+</html>
